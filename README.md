@@ -30,7 +30,8 @@ A professional networking platform with real-time interactions, user authenticat
 **Email:** `demo@gmail.com`  
 **Password:** `Demo@123`
 
-Use these credentials to explore the platform without creating a new account.
+Use these credentials to explore the platform without creating a new account. <br>
+You can also create a new account and explore the platform. It will work the same way.
 
 ---
 
