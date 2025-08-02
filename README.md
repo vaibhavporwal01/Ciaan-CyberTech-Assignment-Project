@@ -25,6 +25,97 @@ A professional networking platform with real-time interactions, user authenticat
 
 ---
 
+## 📁 Project Structure
+
+\`\`\`
+mini-linkedin-clone/
+│
+├── 📁 app/                          # Next.js App Router
+│   ├── 📁 (auth)/                   # Authentication Routes
+│   │   ├── 📄 login/page.tsx        # Login page
+│   │   └── 📄 register/page.tsx     # Registration page
+│   │
+│   ├── 📁 api/                      # API Routes
+│   │   ├── 📄 health/route.ts       # Health check endpoint
+│   │   └── 📄 keep-alive/route.ts   # Keep-alive endpoint
+│   │
+│   ├── 📁 profile/                  # Profile Pages
+│   │   └── 📄 [id]/page.tsx         # Dynamic user profile
+│   │
+│   ├── 📄 settings/page.tsx         # Settings page
+│   ├── 📄 setup/page.tsx            # Database setup page
+│   ├── 📄 test-db/page.tsx          # Database test page
+│   ├── 📄 account-deleted/page.tsx  # Account deletion confirmation
+│   ├── 📄 layout.tsx                # Root layout
+│   ├── 📄 page.tsx                  # Home page
+│   └── 📄 globals.css               # Global styles
+│
+├── 📁 components/                   # Reusable Components
+│   ├── 📁 ui/                       # shadcn/ui Components
+│   │   ├── 📄 button.tsx            # Button component
+│   │   ├── 📄 card.tsx              # Card component
+│   │   ├── 📄 dialog.tsx            # Dialog component
+│   │   ├── 📄 input.tsx             # Input component
+│   │   ├── 📄 textarea.tsx          # Textarea component
+│   │   ├── 📄 avatar.tsx            # Avatar component
+│   │   ├── 📄 badge.tsx             # Badge component
+│   │   ├── 📄 switch.tsx            # Switch component
+│   │   ├── 📄 separator.tsx         # Separator component
+│   │   └── 📄 ...                   # Other UI components
+│   │
+│   ├── 📄 navbar.tsx                # Navigation bar
+│   ├── 📄 post-card.tsx             # Post display component
+│   ├── 📄 post-form.tsx             # Post creation form
+│   ├── 📄 posts-feed.tsx            # Posts feed container
+│   ├── 📄 posts-manager.tsx         # Posts state management
+│   ├── 📄 profile-form.tsx          # Profile editing form
+│   ├── 📄 settings-form.tsx         # Settings form
+│   ├── 📄 welcome-banner.tsx        # Welcome banner
+│   ├── 📄 database-status.tsx       # Database status indicator
+│   ├── 📄 delete-account-dialog.tsx # Account deletion dialog
+│   ├── 📄 delete-post-dialog.tsx    # Post deletion dialog
+│   └── 📄 theme-provider.tsx        # Theme context provider
+│
+├── 📁 lib/                          # Utility Libraries
+│   ├── 📄 auth.ts                   # Authentication utilities
+│   ├── 📄 db.ts                     # Database connection
+│   ├── 📄 db-health.ts              # Database health checks
+│   └── 📄 utils.ts                  # General utilities
+│
+├── 📁 actions/                      # Server Actions
+│   ├── 📄 auth.ts                   # Authentication actions
+│   ├── 📄 posts.ts                  # Post management actions
+│   ├── 📄 interactions.ts           # Like/comment/share actions
+│   └── 📄 profile.ts                # Profile management actions
+│
+├── 📁 hooks/                        # Custom React Hooks
+│   ├── 📄 use-mobile.tsx            # Mobile detection hook
+│   └── 📄 use-toast.ts              # Toast notification hook
+│
+├── 📁 scripts/                      # Database Scripts
+│   ├── 📄 setup-database.sql        # Initial database setup
+│   ├── 📄 add-interactions.sql      # Add interactions tables
+│   ├── 📄 create-demo-user.sql      # Create demo user
+│   └── 📄 deployment-guide.md       # Deployment instructions
+│
+├── 📁 public/                       # Static Assets
+│   ├── 📄 placeholder-logo.png      # Logo placeholder
+│   ├── 📄 placeholder-logo.svg      # SVG logo placeholder
+│   ├── 📄 placeholder-user.jpg      # User avatar placeholder
+│   ├── 📄 placeholder.jpg           # General placeholder image
+│   └── 📄 placeholder.svg           # General placeholder SVG
+│
+├── 📄 package.json                  # Dependencies and scripts
+├── 📄 tsconfig.json                 # TypeScript configuration
+├── 📄 tailwind.config.ts            # Tailwind CSS configuration
+├── 📄 next.config.mjs               # Next.js configuration
+├── 📄 postcss.config.mjs            # PostCSS configuration
+├── 📄 components.json               # shadcn/ui configuration
+└── 📄 README.md                     # Project documentation
+\`\`\`
+
+---
+
 ## 🎯 Demo Access
 
 **Email:** `demo@gmail.com`  
@@ -47,24 +138,41 @@ npm run lint     # Run ESLint linting
 
 ## ⚡ Quick Setup
 
-**1. Clone Repository** <br>
-- git clone https://github.com/vaibhavporwal01/mini-linkedin-clone.git <br>
-- cd mini-linkedin-clone <br>
-- npm install <br>
+**1. Clone Repository**
+\`\`\`bash
+git clone https://github.com/vaibhavporwal01/mini-linkedin-clone.git
+cd mini-linkedin-clone
+npm install
+\`\`\`
 
-**2. Environment Variables** <br>
-- Create `.env.local` file:
-- DATABASE_URL="your-postgresql-url" <br>
-- JWT_SECRET="your-jwt-secret" <br>
-- NEXTAUTH_SECRET="your-nextauth-secret" <br>
+**2. Environment Variables**
+Create `.env.local` file:
+\`\`\`env
+DATABASE_URL="your-postgresql-url"
+JWT_SECRET="your-jwt-secret"
+NEXTAUTH_SECRET="your-nextauth-secret"
+\`\`\`
 
-**3. Database Setup** <br>
-- npm run dev <br>
-- Visit: http://localhost:3000/setup <br>
+**3. Database Setup**
+\`\`\`bash
+npm run dev
+# Visit: http://localhost:3000/setup
+\`\`\`
 
-**4. Start Development** <br>
-- npm run dev <br>
-- Open: http://localhost:3000<br>
+**4. Start Development**
+\`\`\`bash
+npm run dev
+# Open: http://localhost:3000
+\`\`\`
+
+---
+
+## 🚀 Deployment
+
+1. Push to GitHub
+2. Connect to Vercel
+3. Add environment variables
+4. Deploy ✅
 
 ---
 
