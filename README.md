@@ -1,11 +1,6 @@
 # 🚀 Mini LinkedIn Clone - Professional Community Platform
 
-A modern, full-featured professional networking platform built with cutting-edge technologies. Connect, share, and grow your professional network with real-time interactions, comprehensive user management, and a sleek, responsive design.
-
-![Mini LinkedIn Clone](https://img.shields.io/badge/Status-Live-brightgreen)
-[![Built with Next.js](https://img.shields.io/badge/Built%20with-Next.js%2015-black)](https://nextjs.org/)
-[![Database](https://img.shields.io/badge/Database-PostgreSQL-blue)](https://postgresql.org/)
-[![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black)](https://vercel.com/)
+A professional networking platform built for **Ciaan Cyber Tech Pvt Ltd** assignment.
 
 ## ✨ Features
 
@@ -15,8 +10,6 @@ A modern, full-featured professional networking platform built with cutting-edge
 - 👤 **User Profiles** - Comprehensive profile management
 - ⚙️ **Settings Dashboard** - Privacy controls and preferences
 - 📱 **Responsive Design** - Perfect on desktop, tablet, and mobile
-- 🎨 **Modern UI** - Clean, professional interface with smooth animations
-- 🔍 **Database Health Monitoring** - Built-in connection status tracking
 
 ## 🛠️ Tech Stack
 
@@ -25,16 +18,12 @@ A modern, full-featured professional networking platform built with cutting-edge
 - **Language**: TypeScript
 - **Styling**: Tailwind CSS
 - **UI Components**: shadcn/ui
-- **Icons**: Lucide React
-- **State Management**: React Server Components + Client Components
 
 ### Backend
 - **Runtime**: Node.js
 - **Framework**: Next.js API Routes
 - **Database**: PostgreSQL (Neon)
-- **ORM**: Raw SQL with connection pooling
 - **Authentication**: JWT with secure cookies
-- **Validation**: Server-side form validation
 
 ### Infrastructure
 - **Hosting**: Vercel
@@ -42,79 +31,39 @@ A modern, full-featured professional networking platform built with cutting-edge
 - **Environment**: Serverless
 - **CDN**: Vercel Edge Network
 
-## 🚀 Quick Start
+## ⚡ Quick Setup
 
-### Prerequisites
-- Node.js 18+ installed
-- Git installed
-- A Neon PostgreSQL database (or any PostgreSQL instance)
-
-### 1. Clone the Repository
+### 1. Clone & Install
 \`\`\`bash
-git clone https://github.com/your-username/mini-linkedin-clone.git
+git clone https://github.com/vaibhavporwal01/mini-linkedin-clone.git
 cd mini-linkedin-clone
-\`\`\`
-
-### 2. Install Dependencies
-\`\`\`bash
 npm install
-# or
-yarn install
-# or
-pnpm install
 \`\`\`
 
-### 3. Environment Setup
-Create a `.env.local` file in the root directory:
-
+### 2. Environment Variables
+Create `.env.local`:
 \`\`\`env
-# Database Configuration
-DATABASE_URL="postgresql://username:password@host:port/database?sslmode=require"
-NEON_DATABASE_URL="postgresql://username:password@host:port/database?sslmode=require"
-
-# Authentication
-JWT_SECRET="your-super-secret-jwt-key-here"
-NEXTAUTH_SECRET="your-nextauth-secret-here"
-NEXTAUTH_URL="http://localhost:3000"
-
-# Optional: Additional Database URLs (for fallback)
-POSTGRES_URL="postgresql://username:password@host:port/database"
-POSTGRES_PRISMA_URL="postgresql://username:password@host:port/database"
+DATABASE_URL="your-postgresql-url"
+JWT_SECRET="your-jwt-secret"
+NEXTAUTH_SECRET="your-nextauth-secret"
 \`\`\`
 
-### 4. Database Setup
-Run the database setup script to create tables and seed data:
-
-\`\`\`bash
-# Visit the setup page in your browser
-npm run dev
-# Then go to: http://localhost:3000/setup
-\`\`\`
-
-Or manually run the SQL scripts:
-\`\`\`bash
-# Connect to your PostgreSQL database and run:
-# 1. scripts/setup-database.sql
-# 2. scripts/add-interactions.sql
-# 3. scripts/create-demo-user.sql
-\`\`\`
-
-### 5. Start Development Server
+### 3. Database Setup
 \`\`\`bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+# Visit: http://localhost:3000/setup
 \`\`\`
 
-Open [http://localhost:3000](http://localhost:3000) in your browser.
+### 4. Start Development
+\`\`\`bash
+npm run dev
+# Open: http://localhost:3000
+\`\`\`
 
 ## 🎯 Demo Access
 
-### Demo User Credentials
-- **Email**: `demo@gmail.com`
-- **Password**: `Demo@123`
+**Email**: `demo@gmail.com`  
+**Password**: `Demo@123`
 
 Use these credentials to explore the platform without creating a new account.
 
@@ -130,23 +79,23 @@ mini-linkedin-clone/
 │   ├── profile/           # User profile pages
 │   ├── settings/          # Settings page
 │   └── page.tsx           # Home page
-├── components/            # Reusable components
+├── components/            # UI Components
 │   ├── ui/               # shadcn/ui components
 │   ├── navbar.tsx        # Navigation component
 │   ├── post-card.tsx     # Post display component
 │   └── ...
-├── lib/                  # Utility libraries
+├── lib/                  # Utilities
 │   ├── auth.ts          # Authentication utilities
 │   ├── db.ts            # Database connection
 │   └── utils.ts         # General utilities
-├── actions/             # Server actions
+├── actions/             # Server Actions
 │   ├── auth.ts         # Authentication actions
 │   ├── posts.ts        # Post management actions
 │   └── ...
-├── scripts/            # Database scripts
+├── scripts/            # Database Scripts
 │   ├── setup-database.sql
 │   └── ...
-└── public/            # Static assets
+└── public/            # Static Assets
 \`\`\`
 
 ## 🔧 Available Scripts
@@ -164,33 +113,12 @@ npm run db:seed      # Seed with demo data
 npm run db:reset     # Reset database
 \`\`\`
 
-## 🌐 Deployment
+## 🚀 Deployment
 
-### Deploy to Vercel (Recommended)
-
-1. **Push to GitHub**:
-   \`\`\`bash
-   git add .
-   git commit -m "Initial commit"
-   git push origin main
-   \`\`\`
-
-2. **Deploy on Vercel**:
-   - Visit [vercel.com](https://vercel.com)
-   - Import your GitHub repository
-   - Add environment variables
-   - Deploy!
-
-3. **Add Environment Variables** in Vercel Dashboard:
-   - `DATABASE_URL`
-   - `JWT_SECRET`
-   - `NEXTAUTH_SECRET`
-   - `NEXTAUTH_URL` (your production URL)
-
-### Alternative Deployment Options
-- **Netlify**: Full-stack deployment with serverless functions
-- **Railway**: Easy PostgreSQL + Next.js deployment
-- **DigitalOcean App Platform**: Container-based deployment
+1. Push to GitHub
+2. Deploy on Vercel
+3. Add environment variables
+4. Done! ✅
 
 ## 🔒 Security Features
 
@@ -244,7 +172,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 - 📧 **Email**: support@yourapp.com
 - 💬 **Discord**: [Join our community](https://discord.gg/yourserver)
-- 🐛 **Issues**: [GitHub Issues](https://github.com/your-username/mini-linkedin-clone/issues)
+- 🐛 **Issues**: [GitHub Issues](https://github.com/vaibhavporwal01/mini-linkedin-clone/issues)
 - 📖 **Documentation**: [Full Documentation](https://docs.yourapp.com)
 
 ## 🎉 Acknowledgments
@@ -257,6 +185,5 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-**Built with ❤️ by [Your Name](https://github.com/your-username)**
-
-*Star ⭐ this repository if you found it helpful!*
+**Assignment Project for Ciaan Cyber Tech Pvt Ltd**  
+**Developer**: [Vaibhav Porwal](https://github.com/vaibhavporwal01)
